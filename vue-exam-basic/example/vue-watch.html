@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vuejs</title>
+</head>
+<body>
+<div id="app">
+  <p>{{mark}}</p>
+
+  <button @click="changeLink">Click to change link</button>
+  <a :href="linkVal">Link</a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      mark: 'Jone has subject math 7 mark',
+      linkVal: 'https://google.com',
+    },
+    watch: {
+      message: function (value) {
+        console.log('His point  was change because someone');
+      },
+    },
+    methods: {
+      changeLink: function () {
+        this.linkVal = 'https://laravel.com';
+      },
+    },
+  });
+  app.mark = 'Jone has subject math 9 mark';
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Vuejs</title>
+</head>
+<body>
+
+<div id="obj">
+  <div v-on:mouseover="tinhToaDo">
+    <h2>Bam nut de tang gia tri</h2>
+    <button @click="tangGiaTri">Nhan vao</button>
+    <button @click="count++">Nhan vao theo js</button>
+    <p @mouseover.stop="">Dung event</p>
+    <p>Gia tri: {{count}}</p>
+    <p>Gia tri: {{count >15?'Ban vuot qua unlimit':'ban nam trong linit'}}</p>
+    <p>Toa do mouse:{{x}}/{{y}}</p>
+  </div>
+
+  <div v-model="">
+
+  </div>
+  <div>
+    <input type="text" @keyup.enter.space="banPhim">
+  </div>
+</div>
+<br>
+<div id="#putdata">
+
+</div>
+<div id="app">
+
+  <input type="text" v-on:input="changeValue">
+  <p>{{dataValue}}</p>
+
+  <input type="text" v-model="name">
+  <p>{{name}}</p>
+
+  <br/>
+  <p>Gia tri A:{{tanga}}</p>
+  <p>Gia tri B:{{tangb}}</p>
+  <p>Gia tri B:{{tangaf()}}</p>
+  <p>Gia tri B:{{tangbf()}}</p>
+  <button v-on:click="a++">Tang a</button>
+  <button v-on:click="b++">Tang b</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="assets/js/vuesr.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.wrapp {
+  margin: 0 auto;
+}
+
+.service {
+  background: #132743;
+  width: 600px;
+  margin: 80px auto;
+  padding: 60px;
+}
+
+
+.service h5 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 10px;
+}
+
+.service .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: #407088;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.service .item:hover {
+  background: rgba(64, 112, 136, .5);
+}
+
+.service .item.active {
+  background: #ffb5b5;
+}
+
+.service .item .name {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.service .item .price, .total {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.total {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+
+
+}
+

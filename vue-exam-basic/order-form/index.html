@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vuejs Order Form</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app">
+  <el-container class="container">
+    <el-col :span="12" class="wrapp">
+
+      <div class="service" v-cloak>
+        <h5>Services</h5>
+        <div class="item" v-for="service in services" v-on:click="toggleActive(service)"
+             v-bind:class="{'active':service.active}">
+          <p class="name">{{service.name}}</p>
+          <span class="price">{{service.price|currency()}}</span>
+        </div>
+        <!--<div class="item" index="2">-->
+          <!--<p class="name">Design</p>-->
+          <!--<span class="price">$400.00</span>-->
+        <!--</div>-->
+        <!--<div class="item" index="3">-->
+          <!--<p class="name">Integration </p>-->
+          <!--<span class="price">$250.00</span>-->
+        <!--</div>-->
+        <!--<div class="item" index="4">-->
+          <!--<p class="name">Tranning </p>-->
+          <!--<span class="price">$220.00</span>-->
+        <!--</div>-->
+        <hr>
+        <div class="total">
+          <p>Total</p>
+          <p class="price">{{total()|currency}}</p>
+        </div>
+      </div>
+
+    </el-col>
+
+
+  </el-container>
+</div>
+
+
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -4,9 +4,10 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 export default new Router({
-  routers: [
+  routes: [
     {
       path: '/',
+      bane: 'home',
       component: () => import('../views/Home')
     },
     {

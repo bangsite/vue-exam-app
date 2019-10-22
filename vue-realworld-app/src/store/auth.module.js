@@ -13,7 +13,7 @@ const getters = {
   currentUser(state) {
     return state.user
   },
-  isAuthenticated(statee) {
+  isAuthenticated(state) {
     return state.isAuthenticated
   }
 };
@@ -21,7 +21,7 @@ const getters = {
 const actions = {
   [LOGIN](context, crendentials) {
     return new Promise(resolve => {
-      ApiService.post('users/login', {user: crendentials}).then(({data}) => {
+      ApiService.post('auth/login', {user: crendentials}).then(({data}) => {
         context.commit(SET_AUTH, data.user);
         resolve(data)
       }).catch(({response}) => {

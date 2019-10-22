@@ -19,8 +19,8 @@
     <el-col :span="12" class="wrapp">
 
       <div class="service">
-        <div class="search ">
-          <el-input class="search-input" placeholder="Enter your search terms" clearable>
+        <div class="search " v-cloak>
+          <el-input class="search-input" placeholder="Enter your search terms" v-model="searchString">
           </el-input>
         </div>
 

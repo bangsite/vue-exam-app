@@ -1,0 +1,48 @@
+.preview-answer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+
+  .header {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #06517B;
+    @include font-size(40px);
+    color: #ffffff;
+    padding: 4% 0;
+
+  }
+
+  .preview-text {
+    margin: 30px auto;
+
+    p {
+      text-align: center;
+      @include font-size(19px);
+      line-height: 1.4;
+      color: #000;
+      font-weight: 400;
+
+    }
+  }
+
+  .preview-img {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+
+    img {
+      width: 70%;
+      margin: 0 auto;
+
+    }
+  }
+
+  .btn {
+    .btn-blue {
+      background: #06517B;
+    }
+  }
+}

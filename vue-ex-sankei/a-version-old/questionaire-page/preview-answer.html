@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link href="../icon.png" rel="apple-touch-icon">
+    <!-- Place favicon.ico in the root directory -->
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="../assets/css/normalize.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/vendor/cropper.min.css" rel="stylesheet">
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700,900&display=swap" rel="stylesheet">
+
+    <meta content="#fafafa" name="theme-color">
+</head>
+
+<body>
+<!--[if IE]>
+<p class="browserupgrade">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="https://browsehappy.com/">upgrade your browser</a>
+    to improve your experience and security.
+</p>
+<![endif]-->
+
+<div class="preview-answer">
+    <h2 class="header">新聞ジェネレーター</h2>
+
+    <div class="preview-text">
+        <p>
+            回答頂きありがとうございました。<br />
+            ディスプレイに反映されますのでご覧ください。<br />
+            後日、集計結果をメールにてお送りします。
+        </p>
+    </div>
+
+
+    <div class="container">
+
+        <section id="layout" class="preview">
+            <div class="container scalable" id="preview">
+                <div id="preview-page">
+                    <div class="layout-header preview-header">
+
+                        <!-- header date-->
+                        <div class="layout-header-date">
+                            <div class="layout-header-date-wrap">
+                                <p id="date-format"></p>
+                            </div>
+                        </div>
+
+                        <!-- header logo brand-->
+                        <div class="layout-header-brand">
+                            <div class="layout-header-brand-wrap">
+                                <img id="layout-header-logo" src="../assets/img/logos/logo-sankei-main.png"
+                                     alt="Sankei logo">
+
+                            </div>
+                        </div>
+
+                        <!-- header info-->
+                        <div class="layout-header-info">
+                            <div class="layout-header-info-wrap">
+                                <p>アンケート</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="layout-main">
+                        <!--main title-->
+                        <div class="layout-main-title">
+                            <div class="layout-main-title-wrap">
+                                <h3>小学校 30代 男性</h3>
+
+                            </div>
+                        </div>
+
+
+                        <div class="layout-main-content">
+
+                            <div class="layout-image">
+                                <div class="layout-image-wrap">
+                                    <img src="../assets/img/questionnaire-review.png" alt="image review">
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="layout-text">
+                                <div class="layout-text-wrap">
+                                    <h3>NIE教育の課題</h3>
+
+                                    <p>
+                                        新聞を購読するまでのハードルが高く、NIEが行えていない。継続的に実施するための予算が不足しており、本腰を入れて取り組めていない。新聞学習の大切さは理解しているが、準備に時間がかかるため行えていない。
+                                    </p>
+                                </div>
+
+                                <div class="layout-text-wrap">
+                                    <h3>産経新聞への要望</h3>
+
+                                    <p>
+                                        情報を整理して読み解く力を育てる教材を作って欲しい。国際的な感覚を子どもたちに持ってほしいので、国際面を充実させて欲しい。パソコンやタブレットでの使用を想定したワークシートなどがあえれば便利だと思う。
+                                    </p>
+                                </div>
+
+                                <div class="rating layout-text-wrap ">
+                                    <h3>NIEの状況</h3>
+
+                                    <div id="rating">
+                                        <i class="fa fa-star checked" id="one"></i>
+                                        <i class="fa fa-star checked" id="two"></i>
+                                        <i class="fa fa-star checked" id="three"></i>
+                                        <i class="fa fa-star " id="four"></i>
+                                        <i class="fa fa-star " id="five"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="layout-footer"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <section class="btn" id="button">
+        <a class="btn-blue btn-preview" href="#">産経新聞NIEページへ</a>
+        <!--<a class="btn-blue" href="#">トップに戻る</a>-->
+    </section>
+
+
+</div>
+<script src="../assets/js/vendor/jquery-3.4.1.min.js"></script>
+<script src="../assets/js/vendor/jspdf.min.js"></script>
+<script src="../assets/js/vendor/dom-to-image.min.js"></script>
+<!--<script src="../assets/js/main.js"></script>-->
+<script src="../assets/js/preview.js"></script>
+<script src="../assets/js/export.js"></script>
+<script src="../assets/js/questionaire-preview.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+</body>
+
+</html>

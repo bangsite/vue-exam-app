@@ -1,0 +1,51 @@
+#chooseLogo {
+    top: 100%;
+    bottom: 0;
+}
+
+#logo {
+    cursor: move;
+}
+
+.name {
+    background-color: #ffffff;
+}
+
+#chooseLogo {
+    opacity: 0;
+}
+
+
+.wrapper {
+  height: 100vh;
+  position: relative;
+
+  &-container {
+    padding: 0 5%;
+
+    .title {
+      font-size: 4rem;
+      color: #707070;
+    }
+
+    .content {
+      //font-size: 3rem;
+
+      p {
+        line-height: 1.5;
+
+      }
+    }
+  }
+
+  .header {
+    width: 100%;
+    background-color: #06517B;
+    text-align: center;
+    font-size: 4rem;
+    color: #ffffff;
+    padding: 4% 0;
+    margin:0 0 5% 0;
+  }
+
+}

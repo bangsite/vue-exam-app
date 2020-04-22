@@ -4,7 +4,7 @@
       <top-menu />
     </div>
 
-    <video />
+    <app-video />
 
     <div id="bottom">
       <bottom-menu />
@@ -23,20 +23,21 @@
 </template>
 
 <script>
+  import Video from "../components/common/Video";
   import TopMenu from "../components/menu/TopMenu";
   import BottomMenu from "../components/menu/BottomMenu";
-  import Video from "../components/common/Video";
 
   export default {
     name: "Menu",
     components: {
       topMenu: TopMenu,
-      bottomMenu: BottomMenu,
-      video: Video
+      appVideo: Video,
+      bottomMenu: BottomMenu
     }
   }
 </script>
 
-<style scoped>
-  @import "../assets/styles/pages/_top.scss";
+<style scoped lang="scss">
+  @import "src/assets/styles/pages/top";
+
 </style>

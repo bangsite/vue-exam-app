@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    <h1>Company Visit</h1>
+  </div>
 </template>
 
 <script>

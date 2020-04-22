@@ -136,7 +136,6 @@
         name: "NieChart",
       components:{
           Header,Footer
-
       }
     }
 </script>

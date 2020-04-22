@@ -1,7 +1,7 @@
 import Detail from '../../pages/Detail'
 
 const detail = {
-  path: '/detail/:postID',
+  path: '/detail',
   name: 'Detail',
   component: Detail,
 

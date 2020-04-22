@@ -1,7 +1,9 @@
 <template>
   <div class="page-footer">
     <div class="btn-back">
-      <a @click="$router.go(-1)"><img src="../../assets/img/icons/btn-back.png" alt="back page" /></a>
+      <a @click="$router.go(-1)">
+        <img src="../../assets/img/icons/btn-back.png" alt="back page" />
+      </a>
     </div>
     <div class="qrcode">
       <p v-html="qrText">{{qrText}}</p>

@@ -1,7 +1,7 @@
 <template>
   <div id="bottom">
     <div class="cover">
-      <router-link to="/home">
+      <router-link to="/niechart">
         <div class="button">
 					<span>
 						アン<br />
@@ -14,9 +14,9 @@
         ref="slick"
         :options="slickOptions"
         dir="rtl">
-<!--        <router-link v-for="item in list" :key="item.id" :to="{ name: 'Detail', params: { postID: item.id }}">-->
-<!--          <img :src="item.thumbnail_url" alt="image new" />-->
-<!--        </router-link>-->
+        <router-link v-for="item in data" :key="item.id" :to="{ name: 'Detail', params: { postID: item.id }}">
+          <img :src="item.imgSrc" alt="image new" />
+        </router-link>
       </slick>
     </div>
   </div>
@@ -24,6 +24,8 @@
 
 <script>
   import Slick from 'vue-slick'
+
+  import Data from '../../data/newspaper.json'
 
   export default {
     name: "BottomSlider",
@@ -41,27 +43,34 @@
           centerMode: true,
           focusOnSelect: true,
           variableWidth: true,
-          rtl: true
-          // Any other options that can be got from plugin documentation
-        }
+          rtl: true,
+        },
+        data: Data
       }
     },
     methods: {
-      next () {
+      next() {
         this.$refs.slick.next()
       },
 
-      prev () {
+      prev() {
         this.$refs.slick.prev()
       }
     }
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   @import '../../../node_modules/slick-carousel/slick/slick.css';
-  /*@import "src/assets/styles/pages/_top.scss";*/
-  a {
-    color: inherit;
+  @import "src/assets/styles/pages/_top.scss";
+
+  #bottom {
+    .cover {
+      margin: 0 0 0 auto;
+    }
+
+    > > > .slick-slide {
+      float: right;
+    }
   }
 </style>

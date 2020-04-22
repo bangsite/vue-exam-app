@@ -46,7 +46,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.assetsPath('/img/[name].[hash:7].[ext]')
         }
       },
       {
@@ -64,32 +64,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.vue$/,
-        use: 'vue-loader'
-      },
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'vue-style-loader' },
-          { loader: 'css-loader', options: { sourceMap: true } },
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          { loader: 'vue-style-loader' },
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-          { loader: 'sass-resources-loader',
-            options: {
-              sourceMap: true,
-              resources:'src/assets/styles/main.scss',
-
-            }
-          }
-        ]
       }
     ]
   },

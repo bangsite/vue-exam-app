@@ -16,7 +16,6 @@
     name: "NieIntro",
     components: {
       Video, Footer
-
     }
   }
 </script>

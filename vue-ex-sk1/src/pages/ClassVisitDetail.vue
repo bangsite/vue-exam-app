@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    <h1>Class Visit Detail</h1>
+  </div>
 </template>
 
 <script>

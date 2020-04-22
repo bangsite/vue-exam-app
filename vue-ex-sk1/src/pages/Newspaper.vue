@@ -15,7 +15,7 @@
       </div>
 
       <section class="btn">
-<!--        <a class="btn-blue btn-preview" @click.prevent="confirmNews" href="#">作った新聞を確認</a>-->
+        <!--        <a class="btn-blue btn-preview" @click.prevent="confirmNews" href="#">作った新聞を確認</a>-->
       </section>
     </div>
 
@@ -30,7 +30,8 @@
   export default {
     name: "Newspaper",
     components: {
-
+      Header,
+      Footer
     }
   }
 </script>

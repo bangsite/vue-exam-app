@@ -20,7 +20,7 @@
     }
 </script>
 
-<style scoped>
-  /*@import "src/assets/styles/pages/_top.scss";*/
+<style scoped lang="scss">
+  @import "src/assets/styles/pages/top";
 
 </style>

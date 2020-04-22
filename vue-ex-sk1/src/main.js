@@ -13,6 +13,7 @@ Vue.config.productionTip = false
 //   components: { App },
 //   template: '<App/>'
 // })
+// console.log('home')
 
 new Vue({
   router,

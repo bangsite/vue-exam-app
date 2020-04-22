@@ -1,6 +1,5 @@
 <template>
-    <div class="page">
-      <h1>Home</h1>
+    <div class="top-page">
       <TopSlider />
       <Video />
       <BottomSlider />
@@ -23,6 +22,6 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "../assets/styles/pages/_top.scss";
 </style>

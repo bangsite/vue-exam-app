@@ -17,11 +17,6 @@
 </script>
 
 <style scoped lang="scss">
-
-  /*.top-page {*/
-  /*  #bottom {*/
-  /*    bottom: 10%;*/
-  /*  }*/
-  /*}*/
+  @import "src/assets/styles/pages/top";
 
 </style>

@@ -200,6 +200,7 @@ p.text-horizontal {
   @include transform(translate(-50%, -50%));
   color: #333333;
 
+
 }
 
 input[type=text] {
@@ -240,84 +241,6 @@ input[type=text] {
 
 }
 //v3
-
-//.wrapper {
-//  height: 100vh;
-//  position: relative;
-//
-//  &-container {
-//    padding: 0 5%;
-//
-//    .title {
-//      font-size: 4rem;
-//      color: #707070;
-//    }
-//
-//    .content {
-//      //font-size: 3rem;
-//
-//      p {
-//        line-height: 1.5;
-//
-//      }
-//    }
-//  }
-//
-//  .header {
-//    width: 100%;
-//    background-color: #06517B;
-//    text-align: center;
-//    font-size: 4rem;
-//    color: #ffffff;
-//    padding: 4% 0;
-//    margin:0 0 5% 0;
-//  }
-//
-//}
-//.page {
-//  &-footer {
-//    position: absolute;
-//    bottom: 2%;
-//    left: 50%;
-//    width: 90%;
-//    transform: translateX(-50%);
-//    @include flex();
-//    justify-content: space-between;
-//    align-items: center;
-//
-//    .btn {
-//      &-back {
-//        width: 12%;
-//
-//        img {
-//          width: 100%;
-//        }
-//      }
-//    }
-//
-//    .qrcode {
-//      @include flex();
-//      align-items: center;
-//      justify-content: flex-end;
-//
-//      p {text-align: right;
-//        margin: 0 6px 0 0;
-//        @include font-size(24px);
-//        font-weight: 500;
-//        color: #000;
-//      }
-//
-//      &-img {
-//        width: 70px;
-//
-//
-//        img {
-//          width: 100%;
-//        }
-//      }
-//    }
-//  }
-//}
 
 
 .video-container iframe,

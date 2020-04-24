@@ -4,16 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
+// plugins
+import './plugins/globalComponent'
+import './plugins/moment'
+import './plugins/lodash'
+
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   components: { App },
-//   template: '<App/>'
-// })
-// console.log('home')
 
 new Vue({
   router,

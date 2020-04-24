@@ -9,6 +9,8 @@ import CompanyVisitRoute from "./routes/company.route";
 import NieIntroRoute from "./routes/nieintro.route";
 import DetailRoute from "./routes/detail.route";
 import MenuRoute from "./routes/menu.route";
+import Newspaper from "./routes/newspaper.route";
+import NewspaperDetail from "./routes/newspaperdetail.route";
 
 Vue.use(Router)
 
@@ -27,7 +29,9 @@ const router = new Router({
         MenuRoute,
         ClassVisitRoute,
         CompanyVisitRoute,
-        NieIntroRoute
+        NieIntroRoute,
+        Newspaper,
+        NewspaperDetail
       ]
     }
   ]

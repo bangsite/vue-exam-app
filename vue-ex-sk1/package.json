@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "jquery": "^3.5.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "sass-resources-loader": "^2.0.3",
     "vue": "^2.5.2",
+    "vue-cropperjs": "^4.1.0",
     "vue-router": "^3.0.1",
     "vue-slick": "^1.1.15"
   },

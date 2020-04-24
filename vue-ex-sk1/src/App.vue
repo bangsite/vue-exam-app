@@ -11,6 +11,8 @@
 <style>
   html, body {
     font-family: 'Noto Sans JP', sans-serif;
+    padding: 0;
+    margin: 0;
   }
 
   a {

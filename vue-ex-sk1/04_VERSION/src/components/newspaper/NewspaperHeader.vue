@@ -66,7 +66,6 @@
     },
     computed: {
       newspaper() {
-        console.log(JSON.parse(sessionStorage.getItem('newspaper')));
         return JSON.parse(sessionStorage.getItem('newspaper')) || {}
       },
       getCurrentMonth() {

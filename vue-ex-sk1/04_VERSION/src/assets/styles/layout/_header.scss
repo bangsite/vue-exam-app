@@ -15,6 +15,15 @@
     opacity: 0;
 }
 
+.header {
+  width: 100%;
+  background-color: #06517B;
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0 0 5%;
+  padding: 2% 0;
+}
 
 .wrapper {
   height: 100vh;
@@ -38,14 +47,5 @@
     }
   }
 
-  .header {
-    width: 100%;
-    background-color: #06517B;
-    text-align: center;
-    font-size: 3rem;
-    color: #ffffff;
-    margin: 0 0 5%;
-    padding: 2% 0;
-  }
 
 }

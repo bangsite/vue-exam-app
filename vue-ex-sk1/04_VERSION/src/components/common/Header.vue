@@ -10,5 +10,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import "src/assets/styles/layout/header";
+  @import "../../assets/styles/layout/header";
+
 </style>

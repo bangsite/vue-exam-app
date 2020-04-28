@@ -82,58 +82,8 @@
 <style scoped lang="scss">
 
     .layout {
-
       &-header {
 
-        &-date {
-          &-text {
-            p.text-horizontal {
-              font-family: 'Noto Serif JP', serif;
-              padding-top: 5px;
-              letter-spacing: -2px;
-            }
-
-            .place-holder {
-              font-family: 'Noto Serif JP', serif;
-            }
-          }
-        }
-
-        &-info {
-
-          &-text {
-
-            p {
-              font-size: 50px;
-              text-align: center;
-              height: 60px;
-              padding-top: 5px;
-            }
-
-            .place-holder {
-              font-family: "Noto Sans JP", sans-serif;
-            }
-          }
-        }
-
-        p {
-          font-weight: 500;
-          color: #707070;
-          font-size: 41px;
-          text-align: center;
-          letter-spacing: 3px;
-          border: 1px solid #000;
-          height: 70px;
-          overflow: hidden;
-
-          &.label {
-            display: none;
-          }
-        }
-
-        .place-holder {
-          text-align: center;
-        }
       }
 
       &-main {
@@ -170,10 +120,7 @@
                 }
 
                 .place-holder {
-                  height: 100%;
-                  width: auto;
-                  top: 50%;
-                  font-size: 65px;
+
                 }
               }
             }
@@ -288,7 +235,7 @@
         white-space: nowrap;
         letter-spacing: 4px;
         transform: translate(-50%, -50%);
-        color: #333333;
+        color: #000;
         &.mobile {
           position: initial;
           transform: none;
@@ -326,7 +273,7 @@
         text-orientation: upright;
         word-break: break-all;
         line-height: 1.3;
-        color: #333333;
+        color: #000;
         transform: translate(-50%, -50%);
         &.mobile {
           position: initial;

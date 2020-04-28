@@ -9,6 +9,8 @@ import router from './router'
 import './plugins/globalComponent'
 import './plugins/moment'
 import './plugins/lodash'
+import './plugins/domtoimage'
+import './plugins/jspdf'
 
 Vue.config.productionTip = false
 

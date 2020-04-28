@@ -96,11 +96,11 @@
 
 <style scoped lang="scss">
   @import "src/assets/styles/pages/layout";
+  @import "src/assets/styles/pages/newspaper";
 
-  .layout{
-    &-header{
-      background: url('../../assets/img/bg-header.png');
-
+  .layout {
+    &-header {
+      background: #f2f4f3 url('../../assets/img/bg-header.png');
     }
   }
 </style>

@@ -11,6 +11,9 @@
 
       </div>
     </section>
+    <div class="footer-text">
+      &copy; 産業経済新聞社
+    </div>
   </div>
 </template>
 
@@ -48,7 +51,8 @@
     },
     methods: {
       confirmNews() {
-        console.log("confirmNew")
+        this.$refs.news.handleCropImg()
+        this.$router.push({name: 'NewspaperPreview'})
       }
     }
   }
@@ -56,5 +60,11 @@
 
 <style scoped lang="scss">
   @import "src/assets/styles/pages/layout";
+  @import "src/assets/styles/pages/newspaper";
 
+  .footer-text {
+    display: block;
+    margin: 0 30px;
+    text-align: right;
+  }
 </style>

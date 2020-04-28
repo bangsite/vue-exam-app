@@ -17,6 +17,7 @@
           </div>
         </div>
       </div>
+      <div class="layout-main-title-change" id="changeBackground" @click="changeBackground">背景を変更</div>
       <div class="layout-maincontent">
         <div class="layout-maincontent-left">
           <div class="layout-image">
@@ -198,6 +199,7 @@
         },
         set(value) {
           let newspaper = JSON.parse(sessionStorage.getItem('newspaper')) || {}
+
           newspaper.title = value;
           this.newspaper = newspaper;
         }
@@ -210,19 +212,37 @@
           console.log(value)
           sessionStorage.setItem('newspaper', JSON.stringify(value))
         }
+      },
+      beforeRouteLeave(to, from, next) {
+        console.log(to.name);
+        if (to.name !== 'NewspaperPrivew') {
+          sessionStorage.removeItem('newspaper')
+        }
+        next()
       }
 
     },
     create() {
-
+      const hasSSNewsPaper = _.key(this.newspaper).length > 0;
+      console.log(hasSSNewsPaper)
+      if (hasSSNewsPaper) {
+        this.imgSrc = this.newspaper.cropImg
+      }
     },
     mounted() {
+      this.setFontSize();
+      if (this.imgSrc) {
+        this.selected = false;
+      }
+
+      if (sessionStorage.getItem('backgroundBlack')) {
+        this.isBlack = JSON.parse(sessionStorage.getItem('backgroundBlack'))
+      }
     },
     methods: {
       setFontSize() {
         if (this.newspaper['title']) {
           let inputLength = this.newspaper['title'].length;
-          console.log(inputLength)
         }
       },
       setInputValue(elHTML, valName) {
@@ -230,13 +250,77 @@
         newspaper[valName] = elHTML;
         this.newspaper = newspaper
       },
+      setImage(e) {
+        if (e.target.files.length > 0) {
+          const file = e.target.files[0];
+          if (file.type.indexOf('image/') === -1) {
+            alert("Please select an image file");
+            return
+          }
 
+          if (typeof FileReader === 'function') {
+            const reader = new FileReader();
+
+            reader.onload = ev => {
+              this.imgSrc = ev.target.result;
+              this.originalSrc = this.imgSrc;
+              this.selected = false;
+
+              // rebuild cropperjs with the updated source
+              this.$refs.cropper.replace(ev.target.result)
+            };
+            reader.readAsDataURL(file)
+          } else {
+            alert('Sorry, FileReader API not supported')
+          }
+        }
+      },
+      handleCropImg() {
+        const cropCanvas = this.$refs.cropper.getCroppedCanvas();
+        if (cropCanvas) {
+          this.cropImg = this.$refs.cropper.getCroppedCanvas().toDataURL()
+        }
+        let newspaper = JSON.parse(sessionStorage.getItem('newspaper')) || {};
+
+        newspaper.cropImg = this.cropImg
+        this.newspaper = newspaper
+      },
+      b64toBlob(dataURI) {
+        let byteString = atob(dataURI.split(',')[1]);
+        let ab = new ArrayBuffer(byteString.length);
+        let ia = new Uint8Array(ab);
+
+        for (let i = 0; i < byteString.length; i++) {
+          ia[i] = byteString.charCodeAt(i);
+
+        }
+        return new Blob([ab], {type: 'image/png'})
+      },
+
+      resetImage() {
+        this.$refs.cropper.reset();
+      },
+      setFontSize() {
+
+      },
+      selectHTML() {
+
+      },
+      rotateNumber() {
+
+      },
+      changeBackground() {
+        this.isBlack = !this.isBlack
+        sessionStorage.setItem('backgroundBlack', this.isBlack)
+      }
     }
   }
 </script>
 
 <style scoped lang="scss">
   @import "src/assets/styles/pages/layout";
+  @import "src/assets/styles/pages/newspaper";
+
   #rotate {
     font-size: 20px;
     position: fixed;
@@ -248,25 +332,36 @@
     z-index: 3;
   }
 
-  .layout {
-    &-wrap {
+  .layout-main-title-change {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #06517B;
+    color: #06517B;
+    font-size: 20px;
+  }
 
-    }
+  #changeBackground {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #06517B;
+    color: #06517B;
+    font-size: 20px;
+  }
 
-    &-header {
 
-    }
+  .layout-main-title-wrap-black {
+    background: #000000;
 
-    &-main {
-
-    }
-
-    &-maincontent {
-
-    }
-
-    &-footer {
-
+    input[type="text"] {
+      color: #ffffff;
     }
   }
 

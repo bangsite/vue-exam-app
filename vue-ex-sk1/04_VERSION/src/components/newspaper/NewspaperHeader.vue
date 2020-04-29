@@ -7,6 +7,7 @@
         <div class="layout-header-date-text">
           <p class="text-horizontal" contenteditable="true">
             {{ imperialYear }}{{getCurrentMonth}}（{{getCurrentDay}}）
+            <input type="text" maxlength="13" v-model="currentDate" class="text-horizontal date">
           </p>
         </div>
       </div>
@@ -60,8 +61,9 @@
     },
     data() {
       return {
+        currentDate:'',
+        issuer:'',
         logoUrl: defaultLogo,
-        currentDate: new Date()
       }
     },
     computed: {

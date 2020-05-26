@@ -1,0 +1,1 @@
+"use strict";function authHeader(){var e=JSON.parse(localStorage.getItem("user"));return e&&e.token?{Athorization:"Bearer"+e.token}:{}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.authHeader=authHeader;
